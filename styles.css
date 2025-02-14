@@ -1,19 +1,23 @@
-/* General Page Styling */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark grey text for readability */
+    background-color: #fdfdfd; /* Almost white */
+    color: #222; /* Slightly softer black */
 }
 
 /* Header */
 header {
-    background: #f8f9fa; /* Light grey background */
-    color: #333;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    background: #ffffff; /* Pure white */
+    color: #222;
+    padding: 15px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 nav ul {
@@ -27,25 +31,62 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #222;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    color: #007bff; /* Light blue hover effect */
+    color: #007BFF;
+    text-decoration: underline;
 }
 
-/* Sections */
+/* Main Section */
 section {
-    max-width: 800px;
-    margin: 40px auto;
+    margin: 100px 20px 40px;
     padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+p {
+    font-size: 17px;
     line-height: 1.6;
+    color: #444;
 }
 
 /* Buttons */
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background: #007bff; /* Light blue button
+    padding: 12px 18px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #ffffff;
+    color: #777;
+    padding: 10px;
+    margin-top: 50px;
+    font-size: 14px;
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.05);
+}
