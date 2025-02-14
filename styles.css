@@ -1,23 +1,19 @@
-/* General Styles */
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark grey text for readability */
 }
 
 /* Header */
 header {
-    background: #ffffff;
+    background: #f8f9fa; /* Light grey background */
     color: #333;
-    padding: 15px 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 nav ul {
@@ -27,7 +23,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -37,47 +33,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+    color: #007bff; /* Light blue hover effect */
 }
 
-/* Main Section */
+/* Sections */
 section {
-    margin: 80px 20px;
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
-}
-
-h1, h2 {
-    font-weight: 600;
-}
-
-p {
-    font-size: 18px;
     line-height: 1.6;
-    max-width: 700px;
-    margin: 10px auto;
 }
 
 /* Buttons */
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.button:hover {
-    background: #0056b3;
-}
-
-/* Footer */
-footer {
-    background: #ffffff;
-    color: #333;
-    padding: 10px;
-    margin-top: 50px;
-    font-size: 14px;
-    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
-}
+    background: #007bff; /* Light blue button
