@@ -62,6 +62,12 @@ body {
     text-decoration: none;
     font-weight: 600;
   }
+
+  a, a:visited {
+    color: var(--col1); /* Or any color you want */
+    text-decoration: none;
+    font-weight: 600;
+}
   
   .link:hover {
     text-decoration: underline;
