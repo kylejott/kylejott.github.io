@@ -5,8 +5,8 @@
 :root {
     --black: #000;
     --white: #fff;
-    --col1: #8E44AD;
-    --col2: #3498DB;
+    --col1: #3498DB;
+    --col2: #8E44AD;
     --col3: #2ECC71;
     --base-font-size: 13px;
 }
