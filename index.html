@@ -1,12 +1,212 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyle Ott</title>
-    <link href="/assets/css/style2.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .color-bar {
+            height: 6px;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .col1 {
+            flex: 1;
+            background-color: #95a5a6;
+        }
+        
+        .col2 {
+            flex: 1;
+            background-color: #34495e;
+        }
+        
+        .col3 {
+            flex: 1;
+            background-color: #bdc3c7;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            margin-top: 6px; /* Account for color bar */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .intro-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .intro-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        
+        .intro-section p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .links-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .links-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .link {
+            color: #2c3e50;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            font-weight: 500;
+        }
+        
+        .link:hover {
+            background: #e9ecef;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .link.primary {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+        
+        .link.primary:hover {
+            background: #2980b9;
+            border-color: #2980b9;
+        }
+        
+        .separator {
+            color: #bdc3c7;
+            margin: 0 0.25rem;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .intro-section {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .intro-section p {
+                font-size: 1rem;
+            }
+            
+            .links-section {
+                padding: 1.5rem;
+            }
+            
+            .link {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            
+            .link-row {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .separator {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem 0.75rem;
+            }
+            
+            .intro-section {
+                padding: 1.25rem;
+            }
+            
+            .links-section {
+                padding: 1.25rem;
+            }
+            
+            .link-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .link {
+                text-align: center;
+                width: 100%;
+            }
+        }
+        
+        /* Hover effect for the entire cards */
+        .intro-section {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .intro-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .links-section {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .links-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+    </style>
 </head>
 <body>
     <div class="color-bar">
@@ -14,60 +214,39 @@
         <div class="col2"></div>
         <div class="col3"></div>
     </div>
-    <div class="container" style="max-width: 800px;">
-        <p>
-            My name is Kyle Ott. I am a systems thinker and violence prevention expert with a background in public policy and applied microeconomics interested in cities, data, public transportation.
-            From New Jersey, heart in Berlin, and currently based in Helsinki.
-        </p>
-        <p>
-            <a href="blog/" class="link">Blog</a><br>
-            <a href="/assets/docs/CV.pdf" class="link" target="_blank">CV</a> | 
-            <a href="mailto:kyleott@proton.me" class="link">Email</a> |
-            <a href="https://www.linkedin.com/in/kylejott/" class="link" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/kylejott" class="link" target="_blank">GitHub</a> |
-            <a href="https://bsky.app/profile/kylejott.bsky.social" class="link" target="_blank">Bluesky</a><br>
-            <a href="projects/" class="link">Projects</a>
-        </p>
+    
+    <div class="container">
+        <div class="intro-section">
+            <p>
+                My name is Kyle Ott. I am a systems thinker and violence prevention expert with a background in public policy and applied microeconomics interested in cities, data, public transportation.
+            </p>
+            <p>
+                From New Jersey, heart in Berlin, and currently based in Helsinki.
+            </p>
+        </div>
+        
+        <div class="links-section">
+            <div class="links-grid">
+                <div class="link-row">
+                    <a href="blog/" class="link primary">Blog</a>
+                    <a href="projects/" class="link primary">Projects</a>
+                </div>
+                
+                <div class="link-row">
+                    <a href="/assets/docs/CV.pdf" class="link" target="_blank">CV</a>
+                    <span class="separator">|</span>
+                    <a href="mailto:kyleott@proton.me" class="link">Email</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.linkedin.com/in/kylejott/" class="link" target="_blank">LinkedIn</a>
+                </div>
+                
+                <div class="link-row">
+                    <a href="https://github.com/kylejott" class="link" target="_blank">GitHub</a>
+                    <span class="separator">|</span>
+                    <a href="https://bsky.app/profile/kylejott.bsky.social" class="link" target="_blank">Bluesky</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-
-
-
-
-<!-- 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyle's Webpage</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Moi! Hej! Hello!</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home </a></li>
-                <li><a href="projects.html">Urban Planning Blog [not working]</a></li>
-                <li><a href="about.html">About [not yet!]</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section>
-        <h2> </h2>
-        <p>I'll be adding more things here, soon!</p>
-        <a href="projects.html" class="button">View My Work [do not click]</a>
-    </section>
-
-    <footer>
-        <p>This page is hosted with GitHub Pages.</p>
-    </footer>
-</body>
-</html>
-
-
-<link rel="stylesheet" href="styles.css">
